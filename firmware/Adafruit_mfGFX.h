@@ -60,11 +60,11 @@ struct FontDescriptor
 #endif
 
 #ifdef font_cousine_24
-#include "font_titania_24pt.h"
+#include "font_cousine_24pt.h"
 #endif
 
 #ifdef font_cousine_72
-#include "font_titania_72pt.h"
+#include "font_cousine_72pt.h"
 #endif
 
 #define agswap(a, b) { int16_t t = a; a = b; b = t; }
