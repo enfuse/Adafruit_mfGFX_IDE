@@ -1,7 +1,7 @@
 {
 	"name": "Adafruit_mfGFX",
-	"author": "Paul Kourany / Adafruit",
-	"version": "1.0.4",
+	"author": "Paul Kourany / Adafruit / Juanjo López",
+	"version": "1.0.5",
 	"license": "Adafruit",
 	"description": "Adafruit mfGFX multifont library for Particle Devices"
 }

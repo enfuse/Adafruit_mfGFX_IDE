@@ -59,6 +59,13 @@ struct FontDescriptor
 #include "font_titania_46px.h"
 #endif
 
+#ifdef font_cousine_24
+#include "font_titania_24pt.h"
+#endif
+
+#ifdef font_cousine_72
+#include "font_titania_72pt.h"
+#endif
 
 #define agswap(a, b) { int16_t t = a; a = b; b = t; }
 
@@ -146,6 +153,23 @@ class Adafruit_GFX : public Print {
         fontData = arial_8ptBitmaps;
         fontDesc = arial_8ptDescriptors;
         fontKern = 1;
+        break;
+      #endif
+
+      // Cousine
+      #ifdef font_cousine_24
+      case font_cousine_24:
+      default:
+        fontData = cousine_24ptBitmaps;
+        fontDesc = cousine_24ptDescriptors;
+        break;
+      #endif
+
+      #ifdef font_cousine_72
+      case font_cousine_72:
+      default:
+        fontData = cousine_72ptBitmaps;
+        fontDesc = cousine_72ptDescriptors;
         break;
       #endif
     }
@@ -250,7 +274,7 @@ class Adafruit_GFX : public Print {
   }
 
   // These exist only with Adafruit_GFX (no subclass overrides)
-  
+
   void drawCircle(int16_t x0, int16_t y0, int16_t r, uint16_t color) {
     int16_t f = 1 - r;
     int16_t ddF_x = 1;
@@ -585,7 +609,7 @@ class Adafruit_GFX : public Print {
   }
 
   int16_t width(void) {
-    return _width; 
+    return _width;
   }
 
   uint8_t getRotation(void) {
