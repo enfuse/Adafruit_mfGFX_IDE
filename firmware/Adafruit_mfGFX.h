@@ -146,6 +146,21 @@ class Adafruit_GFX : public Print {
         break;
       #endif
 
+      // Cousine
+      #ifdef font_cousine_24
+      case font_cousine_24:
+        fontData = cousine_24ptBitmaps;
+        fontDesc = cousine_24ptDescriptors;
+        break;
+      #endif
+      #ifdef font_cousine_72
+      case font_cousine_72:
+        fontData = cousine_72ptBitmaps;
+        fontDesc = cousine_72ptDescriptors;
+        break;
+      #endif
+
+
       // Arial
       #ifdef font_arial_8
       case font_arial_8:
@@ -156,22 +171,7 @@ class Adafruit_GFX : public Print {
         break;
       #endif
 
-      // Cousine
-      #ifdef font_cousine_24
-      case font_cousine_24:
-      default:
-        fontData = cousine_24ptBitmaps;
-        fontDesc = cousine_24ptDescriptors;
-        break;
-      #endif
 
-      #ifdef font_cousine_72
-      case font_cousine_72:
-      default:
-        fontData = cousine_72ptBitmaps;
-        fontDesc = cousine_72ptDescriptors;
-        break;
-      #endif
     }
 
     fontStart = pgm_read_byte(fontData+FONT_START);
