@@ -99,7 +99,6 @@ const uint8_t cousine_24ptBitmaps[] =
 
 const FontDescriptor cousine_24ptDescriptors[] =
 {
-	{
 		{2, 31, 0}, 		//
 		{3, 31, 31}, 		// !
 		{11, 31, 62}, 		// "
