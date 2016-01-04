@@ -67,6 +67,18 @@ struct FontDescriptor
 #include "font_cousine_72pt.h"
 #endif
 
+#ifdef font_monofonto_22
+#include "font_monofonto_22px.h"
+#endif
+
+#ifdef font_monofonto_36
+#include "font_monofonto_36px.h"
+#endif
+
+#ifdef font_monofonto_48
+#include "font_monofonto_48px.h"
+#endif
+
 #define agswap(a, b) { int16_t t = a; a = b; b = t; }
 
 class Adafruit_GFX : public Print {
@@ -160,7 +172,26 @@ class Adafruit_GFX : public Print {
         break;
       #endif
 
-
+      // Monofonto
+      #ifdef font_monofonto_22
+      case font_monofonto_22:
+        fontData = monofonto_22pxBitmaps;
+        fontDesc = monofonto_22pxDescriptors;
+        break;
+      #endif
+      #ifdef font_monofonto_36
+      case font_monofonto_36:
+        fontData = monofonto_36pxBitmaps;
+        fontDesc = monofonto_36pxDescriptors;
+        break;
+      #endif
+      #ifdef font_monofonto_48
+      case font_monofonto_48:
+        fontData = monofonto_48pxBitmaps;
+        fontDesc = monofonto_48pxDescriptors;
+        break;
+      #endif
+      
       // Arial
       #ifdef font_arial_8
       case font_arial_8:
